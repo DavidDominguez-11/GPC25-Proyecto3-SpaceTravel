@@ -467,7 +467,7 @@ fn main() {
         for body in &celestial_bodies {
             if body.orbit_radius > 0.0 && body.name != "Vulcanus" && body.name != "Lunaris" {
                 // Dibujar órbitas principales
-                let orbit_color = Color::new(150, 255, 120, 80); // Gris claro para órbitas principales
+                let orbit_color = Color::new(200, 200, 200, 50); // Gris claro para órbitas principales
                 draw_orbit_3d(&mut framebuffer, body.orbit_radius, orbit_color, &view_matrix, &projection_matrix, &viewport_matrix, None);
             } else if body.name == "Umbraleth" {
                  // Dibujar órbita de Vulcanus alrededor de Umbraleth
@@ -594,7 +594,7 @@ fn main() {
             // Crear matriz de modelo para la nave HUD
             let nave_model_matrix = create_model_matrix(
                 nave_position,
-                2.0, // Escala más pequeña para HUD
+                0.08, // Escala más pequeña para HUD
                 Vector3::new(rotation_x, rotation_y, additional_roll)
             );
 
